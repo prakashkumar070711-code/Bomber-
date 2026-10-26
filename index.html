@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RAVAN PHONE GUARD</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 18px;
+    background: #050505;
+    color: #00ff80;
+    font-family: monospace;
+}
+
+.container {
+    max-width: 500px;
+    margin: auto;
+}
+
+header, section {
+    border: 1px solid #00ff80;
+    padding: 18px;
+    margin-bottom: 16px;
+    background: #0a100c;
+    border-radius: 10px;
+}
+
+header {
+    text-align: center;
+}
+
+h1 {
+    color: #ff3030;
+    text-shadow: 0 0 12px red;
+}
+
+h2 {
+    font-size: 18px;
+}
+
+.status {
+    padding: 12px;
+    background: #102416;
+    border-radius: 6px;
+    text-align: center;
+}
+
+button {
+    display: block;
+    width: 100%;
+    padding: 14px;
+    margin-top: 12px;
+    background: #003d1b;
+    color: #00ff80;
+    border: 1px solid #00ff80;
+    border-radius: 6px;
+    font-family: monospace;
+    font-size: 15px;
+}
+
+button:active {
+    background: #00ff80;
+    color: black;
+}
+
+p, li {
+    line-height: 1.7;
+    color: #ddd;
+}
+
+footer {
+    text-align: center;
+    color: #888;
+    font-size: 12px;
+}
+</style>
+</head>
+
+<body>
+<div class="container">
+
+<header>
+    <h1>☠ RAVAN PHONE GUARD ☠</h1>
+    <p>PERSONAL PHONE SECURITY</p>
+    <div class="status">
+        🛡️ PROTECTION GUIDE READY
+    </div>
+</header>
+
+<section>
+    <h2>📞 CALL PROTECTION</h2>
+    <p>
+        Unknown calls ko silence karne aur spam protection
+        enable karne ke liye phone settings check karo.
+    </p>
+
+    <button onclick="showCallTips()">
+        VIEW CALL PROTECTION TIPS
+    </button>
+
+    <div id="callTips"></div>
+</section>
+
+<section>
+    <h2>🔐 SECURITY CHECKLIST</h2>
+
+    <p>☐ Unknown numbers ko block karo</p>
+    <p>☐ OTP kisi ko mat batao</p>
+    <p>☐ Suspicious apps uninstall karo</p>
+    <p>☐ Phone aur apps updated rakho</p>
+
+    <button onclick="checkSecurity()">
+        CHECK SECURITY TIPS
+    </button>
+
+    <div id="securityOutput"></div>
+</section>
+
+<section>
+    <h2>🚨 EMERGENCY ACTION</h2>
+
+    <p>
+        Agar bahut saari calls aa rahi hain, toh DND enable
+        karo aur important contacts ko allow kar do.
+    </p>
+
+    <button onclick="showEmergency()">
+        SHOW EMERGENCY STEPS
+    </button>
+
+    <div id="emergency"></div>
+</section>
+
+<footer>
+    <p>RAVAN PHONE GUARD • SECURITY ASSISTANT</p>
+    <p>Note: This page does not block calls automatically.</p>
+</footer>
+
+</div>
+
+<script>
+function showCallTips() {
+    document.getElementById("callTips").innerHTML =
+        "<p>1. Phone app kholo.<br>" +
+        "2. Three dots par tap karo.<br>" +
+        "3. Settings mein Caller ID & spam dekho.<br>" +
+        "4. Available spam protection enable karo.</p>";
+}
+
+function checkSecurity() {
+    document.getElementById("securityOutput").innerHTML =
+        "<p>Security checklist manually complete karo. " +
+        "Ye page phone ko scan nahi karta.</p>";
+}
+
+function showEmergency() {
+    document.getElementById("emergency").innerHTML =
+        "<p>1. Settings mein Do Not Disturb kholo.<br>" +
+        "2. DND enable karo.<br>" +
+        "3. Important contacts ko allow karo.<br>" +
+        "4. Call logs ke screenshots save karo.<br>" +
+        "5. Apne telecom operator ko report karo.</p>";
+}
+</script>
+
+</body>
+</html>
